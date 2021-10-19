@@ -1,0 +1,11 @@
+# wordpress
+wordpress/html/wp-config.php
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
