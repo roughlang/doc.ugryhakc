@@ -1,6 +1,9 @@
 # wordpress
 wordpress/html/wp-config.php
 
+# mysql
+db/mysql/*
+
 # Mac
 .DS_Store
 .AppleDouble
