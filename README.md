@@ -2,7 +2,7 @@
 
 ```docker-compose.yml
 $ cd doc.ugryhacks
-$ docker-compose uo -d
+$ docker-compose up -d
 ```
 wordpress: http://localhost:9800/
 ```wp-config.php
@@ -37,8 +37,6 @@ $ git init
 [branch "main"]
         remote = origin
         merge = refs/heads/main
-~                              
-https://github.com/roughlang/doc.ugryhakc.git
 ```
 
 
