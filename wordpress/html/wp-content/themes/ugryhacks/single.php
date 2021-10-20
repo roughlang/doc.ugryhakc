@@ -16,15 +16,15 @@
             <?php
               $icatch_image_path = get_the_post_thumbnail_url(get_the_ID(),'medium');
               if(!empty($icatch_image_path)) {
-                echo '<a href="'.get_the_permalink(get_the_ID()).'">';
-                echo '<img src="'.$icatch_image_path.'" alt="'.mt_rand(11111,99999).'" class="item-summary-icatch">';
-                echo '</a>';
+                
+                echo '<img src="'.$icatch_image_path.'" alt="'.mt_rand(11111,99999).'" class="item-text-icatch">';
+                
               }
-              // else {
-              //   if(first_image()) {
-              //     echo '<img src="'.first_image().'" alt="'.mt_rand(11111,99999).'" class="item-summary-icatch">';
-              //   }
-              // }
+              else {
+                // if(first_image()) {
+                //   echo '<img src="'.first_image().'" alt="'.mt_rand(11111,99999).'" class="item-summary-icatch">';
+                // }
+              }
             ?>
             <!-- <a href="#"><img src="/wp-content/themes/ugryhacks/assets/img/sample/IMG_3436.JPG" class="item-summary-icatch"></a> -->
             <?php the_content(); ?>
