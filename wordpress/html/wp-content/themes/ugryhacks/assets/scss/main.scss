@@ -8,13 +8,25 @@ $base-dark-color: #2b5841;
 @mixin base-title-link() {
   a:link, a:visited {
     text-decoration: none;
-    color: $base-dark-color;
+    color: #333;
   }
   a:hover, a:active {
     opacity: 0.5;
     transition : 1s;
   }
 }
+@mixin base-text-link() {
+  a:link, a:visited {
+    text-decoration: none;
+    // color: #4682b4;
+    color: #4682b3;
+  }
+  a:hover, a:active {
+    opacity: 0.5;
+    transition : 0.3s;
+  }
+}
+
 
 body {
   .top-line {
@@ -53,7 +65,7 @@ body {
         margin-bottom: 50px;
       }
       .item-summary {
-        color: #454;
+        color: #444;
         h2 {
           @include base-title-link;
           font-size: 27px;
@@ -114,7 +126,31 @@ body {
       }
     }
     .sub_column {
+      font-size: 15px;
+      li.widget {
+        list-style: none;
+        h2.widgettitle {
+          font-size: 23px;
+          font-weight: normal;
+          color: #444;
+        }
+        ul {
+          // li:before {
+          //   font-family: "Font Awesome 5 Free";
+          //   font-weight: normal;
+          //   content: "\f111";
+          //   color: #555;
+          //   display: inline-block;
+          //   margin-right: 5px;
+          // }
+          li {
+            margin-left: -30px;
+            list-style: none;
+            @include base-text-link;
+          }
 
+        }
+      }
     }
   }
 
