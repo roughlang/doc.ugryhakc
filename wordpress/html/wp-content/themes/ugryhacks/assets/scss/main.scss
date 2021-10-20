@@ -8,19 +8,33 @@ $base-dark-color: #2b5841;
 @mixin base-title-link() {
   a:link, a:visited {
     text-decoration: none;
-    color: $base-dark-color;
+    color: #333;
   }
   a:hover, a:active {
     opacity: 0.5;
     transition : 1s;
   }
 }
+@mixin base-text-link() {
+  a:link, a:visited {
+    text-decoration: none;
+    // color: #4682b4;
+    color: #4682b3;
+  }
+  a:hover, a:active {
+    opacity: 0.5;
+    transition : 0.3s;
+  }
+}
+
 
 body {
   .top-line {
     background: $base-dark-color;
     height: 3px;
     // color: #333;
+    font-family: "Noto Sans Japanese", sans-serif !important;
+    font-weight: 100 !important;
   }
   nav {
     @include letter-spacing;
@@ -53,10 +67,11 @@ body {
         margin-bottom: 50px;
       }
       .item-summary {
-        color: #454;
+        color: #444;
         h2 {
           @include base-title-link;
           font-size: 27px;
+          line-height: 38px;
         }
         p {
           font-size: 15px;
@@ -70,6 +85,17 @@ body {
             border: 1px solid #c1c1c1;
             margin-right: 12px;
             margin-bottom: 5px;
+            border-radius: 50%;
+          }
+          img.item-text-icatch {
+            width: 60px;
+            float: right;
+            height: 60px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            float: left;
+            border: 1px solid #c1c1c1;
+            margin: 10px 6px 0 0;
             border-radius: 50%;
           }
           .post-date {
@@ -118,7 +144,31 @@ body {
       }
     }
     .sub_column {
+      font-size: 15px;
+      li.widget {
+        list-style: none;
+        h2.widgettitle {
+          font-size: 23px;
+          font-weight: normal;
+          color: #444;
+        }
+        ul {
+          // li:before {
+          //   font-family: "Font Awesome 5 Free";
+          //   font-weight: normal;
+          //   content: "\f111";
+          //   color: #555;
+          //   display: inline-block;
+          //   margin-right: 5px;
+          // }
+          li {
+            margin-left: -30px;
+            list-style: none;
+            @include base-text-link;
+          }
 
+        }
+      }
     }
   }
 

@@ -37,8 +37,6 @@ $ git init
 [branch "main"]
         remote = origin
         merge = refs/heads/main
-~                              
-https://github.com/roughlang/doc.ugryhakc.git
 ```
 
 
