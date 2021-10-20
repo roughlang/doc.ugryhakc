@@ -1,5 +1,6 @@
 # wordpress
 wordpress/html/wp-config.php
+wordpress/html/wp-content/uploads/*
 
 # mysql
 db/mysql/*
