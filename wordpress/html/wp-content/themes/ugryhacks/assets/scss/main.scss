@@ -74,9 +74,12 @@ body {
           }
           .post-date {
             float: right;
+            font-size: 12px;
+            margin-right: 20px;
           }
         }
         .tags {
+          display: inline-block;
           margin-bottom: 6px;
           .post-tag {
             a:link,a:visited {
@@ -93,6 +96,7 @@ body {
           }
         }
         ul.post-categories {
+          display: inline-block;
           margin-left: -33px;
           li {
             display: inline-block;
