@@ -56,7 +56,16 @@ body {
     // background: bottom;
     background-position: left, right bottom;
   }
-
+  .breadcrumb {
+    font-size: 12px;
+    ul {
+      li {
+        list-style: none;
+        display: inline-block;
+        @include base-text-link;
+      }
+    }
+  }
   .blog-block {
     line-height: 30px;
     letter-spacing: 1px;
@@ -179,6 +188,9 @@ body {
     @include letter-spacing;
     .footer-menu {
       height: 150px;
+    }
+    .copy-right {
+      font-size: 13px;
     }
   }
 }
