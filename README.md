@@ -1,7 +1,7 @@
 # Docker for wordpress (doc.ugryhacks)
 
 ```docker-compose.yml
-$ cd doc.ugryhacks
+$ cd doc.ugryhack
 $ docker-compose up -d
 ```
 wordpress: http://localhost:9800/
