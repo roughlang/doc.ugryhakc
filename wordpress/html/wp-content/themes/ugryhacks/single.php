@@ -39,12 +39,14 @@
             <?php the_content(); ?>
             <span class="post-date"><?php the_time('Y.n.j (D)'); ?></span>
           </p>
-          <p class="tags">
-          <span class="post-tag"><a href="https://ugryhacks.com/note/tag/laravel/" rel="tag">Laravel</a><a href="https://ugryhacks.com/note/tag/php/" rel="tag">PHP</a></span></p>
-          <ul class="post-categories">
-            <li><a href="https://ugryhacks.com/note/category/backend/" rel="category tag">Backend</a></li>
-            <li><a href="https://ugryhacks.com/note/category/docker/" rel="category tag">Docker</a></li>
-          </ul>
+          <div class="meta">
+            <div class="tags">
+              <?php the_tags('',''); ?>
+            </div>
+            <div class="categories">
+              <?php the_category("<span></span>"); ?>
+            </div>
+          </div>
         </div><!-- item-summary id -->
         <?php endwhile; else: ?>
           <p>記事がありません。</p>
