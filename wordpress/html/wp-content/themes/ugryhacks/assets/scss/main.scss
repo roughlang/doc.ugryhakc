@@ -82,6 +82,7 @@ body {
           font-size: 27px;
           line-height: 38px;
         }
+        /* long text */
         p {
           font-size: 15px;
           img.item-summary-icatch {
@@ -112,7 +113,30 @@ body {
             font-size: 12px;
             margin-right: 20px;
           }
+          a {
+            img {
+              width: 100%;
+            }
+          }
         }
+        /* modal */
+        .modal {
+          // background: $base-dark-color;
+          // opacity: 0.5;
+          .modal-dialog {
+            .modal-content {
+              .modal-header {
+                border: none;
+              }
+              .modal-body {
+                img {
+                  margin-bottom: 20px;
+                }
+              }
+            }
+          }
+        }
+        /* tag cloud */
         .tags {
           display: inline-block;
           margin-bottom: 6px;
@@ -130,6 +154,7 @@ body {
             }
           }
         }
+        /* category */
         ul.post-categories {
           display: inline-block;
           margin-left: -33px;
