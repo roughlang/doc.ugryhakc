@@ -118,8 +118,22 @@ body {
               width: 100%;
             }
           }
+          /* modal */
+          .modal-link {
+            p{
+              img.modal-image {
+                width: 100%;
+                margin-bottom: 20px;
+              }
+            }
+          }
         }
-        /* modal */
+
+
+        .modal-link:hover {
+          cursor: pointer;
+          cursor: hand; 
+        }
         .modal {
           // background: $base-dark-color;
           // opacity: 0.5;
@@ -235,7 +249,12 @@ body {
 .mt-50 { margin-top: 50px; }
 .mt-60 { margin-top: 60px; }
 .mt-70 { margin-top: 70px; }
-
+.mt-80 { margin-top: 80px; }
+.mt-90 { margin-top: 90px; }
+.mt-100 { margin-top: 100px; }
+.mb-10 { margin-bottom: 10px; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
 .mb-40 { margin-bottom: 40px; }
 .mb-50 { margin-bottom: 50px; }
 .mb-60 { margin-bottom: 60px; }

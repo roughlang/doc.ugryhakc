@@ -32,8 +32,8 @@ function lalala_default_content($content) {
 
 <!-- Button trigger modal -->
 <!--
-<a data-bs-toggle="modal" data-bs-target="#modalid_{$id}">
-  <img src="{$url}" width="100%" alt="{$title}">
+<a data-bs-toggle="modal" data-bs-target="#modalid_{$id}" class="modal-link">
+  <img src="{$url}" width="100%" alt="{$title}" class="modal-image mb-10">
 </a>
 -->
 <!-- Modal -->
