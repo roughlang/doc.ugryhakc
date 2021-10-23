@@ -20,11 +20,11 @@ function my_theme_setup() {
 add_action( 'after_setup_theme', 'my_theme_setup');
 
 /* 記事編集時のデフォルトの文字列 */
-add_filter('the_editor_content', 'lalala_default_content');
-function lalala_default_content($content) {
-    if (empty($content)) {
-      $default = <<<EOM
-
+add_filter('the_editor_content', 'default_content');
+function default_content($content) {
+  if (empty($content)) {
+    $default = <<<EOM
+### title
 
 ------------------------
 - [https://localhost/](https://localhost/)
@@ -32,20 +32,20 @@ function lalala_default_content($content) {
 
 <!-- Button trigger modal -->
 <!--
-<a data-bs-toggle="modal" data-bs-target="#modalid_{$id}" class="modal-link">
-  <img src="{$url}" width="100%" alt="{$title}" class="modal-image mb-10">
+<a data-bs-toggle="modal" data-bs-target="#modalid_ugryhacks" class="modal-link">
+  <img src="http://localhost/" width="100%" alt="xxxxxxx" class="modal-image mb-10">
 </a>
 -->
 <!-- Modal -->
 <!--
-<div class="modal fade" id="modalid_{$id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalid_ugryhacks" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img src="{$url}" width="100%" alt="{$title}">
+        <img src="http://localhost/" width="100%" alt="xxxxxxx">
       </div>
 
     </div>
@@ -53,8 +53,8 @@ function lalala_default_content($content) {
 </div>
 -->
 EOM;
-        return $default;
-    } else {
-        return $content;
-    }
+    return $default;
+  } else {
+    return $content;
+  }
 }
