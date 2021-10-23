@@ -38,6 +38,13 @@ body {
     @include letter-spacing;
     .search-form {
       border-radius: 4px 0 0 4px;
+      // background: #999;
+    }
+    .search-form:hover,.search-form:active {
+      color: #333;
+      background-color: #fff;
+      // border-color: #fff;
+      border: none;
     }
     .search-btn {
       margin-left: -9px;
@@ -247,7 +254,7 @@ body {
             height: 12px;
             background-color: #ffd700;
             border-radius: 50%;
-            border: 2px solid $base-dark-color;
+            border: 3px solid $base-dark-color;
           }
         }
         div.tagcloud {

@@ -20,7 +20,7 @@ function my_theme_setup() {
 add_action( 'after_setup_theme', 'my_theme_setup');
 
 /* 記事編集時のデフォルトの文字列 */
-add_filter('the_editor_content', lalala_default_content);
+add_filter('the_editor_content', 'lalala_default_content');
 function lalala_default_content($content) {
     if (empty($content)) {
       $default = <<<EOM
