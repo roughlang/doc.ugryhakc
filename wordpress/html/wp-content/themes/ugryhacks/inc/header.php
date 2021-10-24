@@ -1,5 +1,31 @@
 <?php
 include( get_template_directory()."/define.php");
+
+/**
+ * アクセスカウント
+ */
+if (ENV == 'local') {
+  include("/var/www/html/utility/factory.php");
+} else if (ENV == 'prod') {
+  include("/home/users/2/pinoko.jp-roughlang/web/ugryhacks/prod/doc/utility/factory.php");
+  $json = "/home/users/2/pinoko.jp-roughlang/web/ugryhacks/prod/doc/utility/";
+}
+
+function accsess_count() {
+  $u = new utility();
+  $database = $u->mysql_connect('');
+  $sql = "SELECT value FROM statistics where name = 'access'";
+  $access = $database->query($sql);
+  $ac = $access->fetch_assoc();
+  $add_access = $ac["value"] + 1;
+  $sql = "UPDATE statistics SET value = ".$add_access." where name = 'access'";
+  $add = $database->query($sql);
+
+  return $add_access;
+}
+$re = accsess_count();
+echo "<!--".$re."-->";
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">

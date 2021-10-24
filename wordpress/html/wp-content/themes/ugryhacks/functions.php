@@ -1,5 +1,8 @@
 <?php
 
+
+
+
 /* Sidebar widget */
 if ( function_exists('register_sidebar') ) register_sidebar(
   ['id' => 'sidebar-1',]
@@ -57,3 +60,5 @@ EOM;
 
 /* 記事のpタグの挿入を阻止する */
 remove_filter('the_content', 'wpautop');
+
+

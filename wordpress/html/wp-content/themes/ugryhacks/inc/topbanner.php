@@ -1,6 +1,12 @@
-<?php
-
-?>
+<script>
+var url = "http://localhost:9800/utility/statistics.json";
+$.getJSON(url, (data) => {
+  console.log(data.access);
+  console.log(data.posts);
+  $('#posts').text('posts: ' + data.posts);
+  $('#accsess').text('accsess: ' + data.access);
+});
+</script>
 <!-- top-banner -->
 <div class="p-3 p-sm-5 mb-4 border-top top-banner" id="top_bannaer">
   <div class="container top-banner-container">
@@ -12,12 +18,12 @@
       <div class="col-lg-8">
         <div class="num-bloc">
           <ul>
-            <li>posts: 9999999</li>
-            <li>accsess: 9999999</li>
-            <li>contact: 9999999</li>
-            <li>trackback: 9999999</li>
-            <li>from: 2021.10.24</li>
-            <li>posts: 9999999</li>
+            <li id="posts">posts: 9999999</li>
+            <li id="accsess">accsess: 9999999</li>
+            <li id="contact">contact: 0</li>
+            <li id="trackback">trackback: 0</li>
+            <li id="from">from: 2021.10.24</li>
+            <li id="days">days: 0</li>
           </ul>
         </div>
       </div>
