@@ -24,7 +24,7 @@
           $categories = get_categories( $args );
         ?>
         <?php foreach( $categories as $category ) : ?>
-          <h2 class="archives-category-title"><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?>(<?php echo $category->term_id; ?>)</a></h2>
+          <h2 class="archives-category-title"><a href="<?php echo get_category_link( $category->term_id ); ?>"><?php echo $category->name; ?><!--(<?php echo $category->term_id; ?>)--></a></h2>
           <?php
           $arg = array(
             'posts_per_page' => 9999, // 表示する件数

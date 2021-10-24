@@ -27,6 +27,9 @@ $base-dark-color: #2b5841;
 }
 
 
+
+
+
 body {
   .top-line {
     background: $base-dark-color;
@@ -53,12 +56,63 @@ body {
   }
   .top-banner {
     width: 100%;
-    background: #000;
+    background: #888;
     background-image: url("../../assets/img/top/top-banner-01.jpg");
     background-size: cover;
     // background: center;
     // background: bottom;
+    height: 500px;
+    background-repeat: no-repeat;
     background-position: left, right bottom;
+    background-position: center top -100px;
+    z-index: 10000;
+    .top-banner-container {
+      color: #fff;
+      h2.top-banner-title {
+        font-size: 60px;
+        // background: #000;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 5px 10px;
+        border-radius: 10px;
+        // opacity: 0.5;
+      }
+      .top-banner-description {
+        display: inline;
+        color: #000;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 5px 10px;
+        border-radius: 10px;
+      }
+      .num-bloc {
+        color: #eee;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 5px 10px;
+        border-radius: 10px;
+        // width: 50%;
+        ul {
+          // display: flex;
+          // justify-content: flex-end;
+          li {
+            display: block;
+            text-align: right;
+            list-style: none;
+          }
+        }
+      }
+    }
+  }
+  .top-banner::before {
+    // content: '';
+    // // position: absolute;
+    // /* 輪郭がぼやけてしまうのでブラー範囲を広げる */
+    // top: 60px;
+    // height: 498px;
+    // bottom: -5px;
+    // left: 0;
+    // right: 0;
+    // background: inherit;
+    // filter: blur(2px);
+    // z-index: 1;
   }
   .breadcrumb {
     font-size: 12px;
@@ -84,7 +138,7 @@ body {
         @include base-text-link;
         h2 {
           @include base-title-link;
-          font-size: 27px;
+          font-size: 23px;
           line-height: 38px;
         }
         /* long text */
@@ -144,7 +198,7 @@ body {
         /* markdown */
         h1 { font-size: 30px; margin-top: 20px; color: red;}//unuse
         h2 { font-size: 23px; margin-top: 20px; }//unuse
-        h3 { font-size: 18px; margin-top: 30px; }
+        h3 { font-size: 19px; margin-top: 30px; }
         h4 { font-size: 18px; margin-top: 30px; }
         h5 { font-size: 17px; margin-top: 30px; }
         h6 { font-size: 16px; margin-top: 30px; }

@@ -11,7 +11,7 @@
     <div class="row">
       
       <div class="col-lg-8 main_column">
-      <h1 class="page-title"><?php bloginfo( 'name' ); ?> Blog</h1>
+      <!-- <h1 class="page-title"><?php bloginfo( 'name' ); ?> Blog</h1> -->
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="item-summary mt-20 mb-40" id="wp_<?php the_ID(); ?>">
