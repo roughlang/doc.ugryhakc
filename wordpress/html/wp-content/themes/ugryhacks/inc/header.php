@@ -7,8 +7,8 @@ include( get_template_directory()."/define.php");
 if (ENV == 'local') {
   include("/var/www/html/utility/factory.php");
 } else if (ENV == 'prod') {
-  include("/home/users/2/pinoko.jp-roughlang/web/ugryhacks/prod/doc/utility/factory.php");
-  $json = "/home/users/2/pinoko.jp-roughlang/web/ugryhacks/prod/doc/utility/";
+  include("/home/users/2/pinoko.jp-roughlang/web/ugryhacks/prod/doc/wordpress/html/utility/factory.php");
+  $json = "/home/users/2/pinoko.jp-roughlang/web/ugryhacks/prod/doc/wordpress/html/utility/";
 }
 
 function accsess_count() {
