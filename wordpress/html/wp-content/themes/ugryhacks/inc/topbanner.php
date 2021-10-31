@@ -1,5 +1,13 @@
 <script>
-var url = "http://localhost:9800/utility/statistics.json";
+<?php
+if (ENV == 'local') {
+  echo 'var url = "https://doc.ugryhacks.com/utility/statistics.json";';
+} else if (ENV == 'prod') {
+  echo 'var url = "https://doc.ugryhacks.com/utility/statistics.json";';
+}
+?>
+
+
 $.getJSON(url, (data) => {
   console.log(data.access);
   console.log(data.posts);

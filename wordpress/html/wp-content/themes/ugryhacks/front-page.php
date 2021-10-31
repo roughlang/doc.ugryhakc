@@ -17,7 +17,7 @@
           <div class="col-sm-4" style="margin: 0 auto;">
             
             <img class="m3-icon" src="<?php bloginfo('template_directory'); ?>/assets/img/top/m3-icon01.png" alt="">
-            <p class="m3-text mx-auto d-block"><a href="#">Laravel</a></p>
+            <p class="m3-text mx-auto d-block"><a href="/laravel-manual/">Laravel</a></p>
           </div>
 
           <div class="col-sm-4 mx-auto d-block">
