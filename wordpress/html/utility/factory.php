@@ -1,4 +1,5 @@
 <?php
+require_once "./wp-config.php";
 
 class utility
 {
@@ -10,10 +11,10 @@ class utility
   ];
 
   public $db =[
-    "host" => "db:3306",
-    "user" => "user",
-    "password" => "password",
-    "database" => "wordpress_db",
+    "host" => DB_HOST,
+    "user" => DB_USER,
+    "password" => DB_PASSWORD,
+    "database" => DB_NAME,
   ];
 
   public $statistics_file = "./statistics.json";
