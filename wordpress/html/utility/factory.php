@@ -58,7 +58,7 @@ class utility
      */
     $now = date("Y-m-d H:i:s");
     $line = $now." [".$log_level."]: ".$message."\n";
-    file_put_contents("./utility.log", $line, FILE_APPEND | LOCK_EX);
+    file_put_contents("../utility.log", $line, FILE_APPEND | LOCK_EX);
     return true;
   }
 

@@ -14,5 +14,8 @@ db/mysql/*
 Thumbs.db
 ehthumbs.db
 
+# app
+wordpress/html/utility.log
+
 # private
 material/*

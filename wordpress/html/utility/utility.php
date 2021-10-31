@@ -1,6 +1,6 @@
 <?php
-// phpinfo();
-include "./factory.php";
+
+include __DIR__."/factory.php";
 $json_file = "./statistics.json";
 $env = "local"; # local | dev | stg | prod
 $u = new utility();
