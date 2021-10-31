@@ -26,7 +26,6 @@ $access = $database->query($sql);
 $c_access = $access->fetch_assoc();
 $u->logging("access count ".$c_access["value"],"INFO");
 
-
 /* statistics */
 $statistics_data = [
   "access" => $c_access["value"],
@@ -34,15 +33,6 @@ $statistics_data = [
 ];
 $json = $u->json_writeout($statistics_data, $json_file);
 $u->logging("statistics_data as json".$json,"INFO");
-
-
-
-
-
-
-
-
-
-
+echo $json;
 
 $database->close();

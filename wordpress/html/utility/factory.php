@@ -1,6 +1,8 @@
 <?php
-require_once "./wp-config.php";
+require_once (__DIR__."/../wp-config.php");
 
+// echo __DIR__."/../wp-config.php";
+// exit;
 class utility
 {
   public $hello = "hello";
