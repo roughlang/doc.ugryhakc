@@ -9,9 +9,6 @@ RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# 除外するディレクトリを追加
-RewriteCond %{REQUEST_URI} !(^/foobar/)
-RewriteCond %{REQUEST_URI} !(^/utility/)
 RewriteRule . /index.php [L]
 </IfModule>
 
