@@ -5,13 +5,24 @@
 
 <?php include( get_template_directory()."/inc/topbanner.php"); ?>
 
+<?php
+/* categories */
+$category = get_the_category();
+?>
+<div class="breadcrumb">
+  <ul>
+    <li><a href="/">Home</a></li> >
+    <li><?php echo $category[0]->name; ?></li>
+  </ul>
+</div>
+
 <div class="blog-block mt-70 mb-70">
   
   <div class="container">
     <div class="row">
       
       <div class="col-lg-8 main_column">
-      <h1 class="page-title"><?php bloginfo( 'name' ); ?> Blog</h1>
+      <h1 class="page-title">Category: <?php echo $category[0]->name; ?></h1>
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="item-summary mt-20 mb-40" id="wp_<?php the_ID(); ?>">

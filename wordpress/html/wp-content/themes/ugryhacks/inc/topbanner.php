@@ -1,10 +1,15 @@
 <script>
 <?php
 if (ENV == 'local') {
-  echo 'var url = "https://doc.ugryhacks.com/utility/statistics.json";';
+  echo 'var url = "http://localhost:9800//utility/statistics.json";';
 } else if (ENV == 'prod') {
   echo 'var url = "https://doc.ugryhacks.com/utility/statistics.json";';
 }
+date_default_timezone_set('Asia/Tokyo');
+$today = new DateTime('now');
+$day = new DateTime('2021-10-24');
+$diff = $day->diff($today);
+echo 'var days = '.$diff->days.';'
 ?>
 
 
@@ -13,6 +18,7 @@ $.getJSON(url, (data) => {
   console.log(data.posts);
   $('#posts').text('posts: ' + data.posts);
   $('#accsess').text('accsess: ' + data.access);
+  $('#days').text('days: ' + days);
 });
 </script>
 <!-- top-banner -->
