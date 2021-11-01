@@ -59,6 +59,13 @@ body {
   }
   nav {
     @include letter-spacing;
+    .navbar-brand {
+      // background: #ff0;
+      img.logo {
+        width: 24px;
+        margin: -3px 3px 0 0;
+      }
+    }
     .search-form {
       border-radius: 4px 0 0 4px;
       // background: #999;
@@ -79,6 +86,7 @@ body {
     form.wp-block-search {
       @media (max-width: 575px) { margin: 18px 0;}
     }
+
   }
   .top-banner {
     width: 100%;
@@ -235,9 +243,10 @@ body {
             border-radius: 50%;
           }
           .post-date {
-            float: right;
+            // float: right;
             font-size: 12px;
             margin-right: 20px;
+            // font-size: 12px;
           }
           a {
             img {
@@ -371,6 +380,7 @@ body {
               margin-right: 10px;
               border-radius: 2px;
               border: solid 1px #333;
+              text-decoration: none;
             }
           }
           /* category */
@@ -382,8 +392,12 @@ body {
               margin-right: 10px;
               border-radius: 2px;
               border: solid 1px #c1c1c1;
+              text-decoration: none;
             }
           }
+        }
+        .post-date {
+          font-size: 12px;
         }
       }
       nav.pagination {

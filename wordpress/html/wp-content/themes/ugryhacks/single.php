@@ -37,7 +37,7 @@
             ?>
             <!-- <a href="#"><img src="/wp-content/themes/ugryhacks/assets/img/sample/IMG_3436.JPG" class="item-summary-icatch"></a> -->
             <?php the_content(); ?>
-            <span class="post-date"><?php the_time('Y.n.j (D)'); ?></span>
+            <span class="post-date float-end"><?php the_time('Y.n.j (D)'); ?></span>
           </p>
           <div class="meta">
             <div class="tags">
