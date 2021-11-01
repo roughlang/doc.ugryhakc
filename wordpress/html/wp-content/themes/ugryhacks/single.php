@@ -1,5 +1,8 @@
 <?php
   include( get_template_directory()."/inc/header.php");
+  $post_id = get_the_ID();
+  /* categories */
+  $category = get_the_category();
 ?>
 <body>
 <div class="top-line"></div>
@@ -8,7 +11,7 @@
 <div class="breadcrumb">
   <ul>
     <li><a href="/">Home</a></li> >
-    <li><a href="#">Category</a></li> >
+    <li><a href="<?php echo get_category_link($category[0]->term_id); ?>"><?php echo $category[0]->name; ?></a></li> >
     <li><?php echo mb_substr(get_the_title(),0,20); ?></li>
   </ul>
 </div>
