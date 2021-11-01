@@ -41,6 +41,9 @@ $base-light-color: #ffd700;
   }
 }
 
+html {
+  font-family: "Noto Sans Japanese", sans-serif !important;
+}
 
 
 
@@ -182,24 +185,33 @@ body {
     .main_column {
 
       .top-icon-menu {
-        img.m3-icon {
-          margin: 0 auto;
-          width: 120px;
-          border-radius: 10px;
-          -webkit-filter: grayscale(50%);
-          -moz-filter: grayscale(50%);
-          -ms-filter: grayscale(50%);
-          -o-filter: grayscale(50%);
-          filter: grayscale(50%);
-        }
-        p {
-          margin-top: 15px;
-          font-size: 28px;
-          a:link, a:visited {
-            text-decoration: none;
-            color: #000;
+        display: flex;
+        justify-content: center;
+        // background: #ccc;
+        flex-wrap: wrap;
+        .m3 {
+          width: 200px;
+          height: 200px;
+          margin: 10px;
+          // background-color: #66b6d5;
+          img.m3-icon {
+            margin: 0 auto;
+            width: 120px;
+            border-radius: 10px;
+            -webkit-filter: grayscale(50%);
+            -moz-filter: grayscale(50%);
+            -ms-filter: grayscale(50%);
+            -o-filter: grayscale(50%);
+            filter: grayscale(50%);
           }
-          
+          p {
+            margin-top: 15px;
+            font-size: 28px;
+            a:link, a:visited {
+              text-decoration: none;
+              color: #000;
+            }
+          }
         }
       }
       
