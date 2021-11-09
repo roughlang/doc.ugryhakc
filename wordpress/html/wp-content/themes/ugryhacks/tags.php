@@ -5,34 +5,24 @@
 
 <?php include( get_template_directory()."/inc/topbanner.php"); ?>
 
+<?php
+/* categories */
+$category = get_the_category();
+?>
+<div class="breadcrumb">
+  <ul>
+    <li><a href="/">Home</a></li> >
+    <li><?php echo $category[0]->name; ?></li>
+  </ul>
+</div>
+
 <div class="blog-block mt-70 mb-70">
-<?php echo "<!--".$_SERVER["REMOTE_ADDR"]."-->";?>
+  
   <div class="container">
     <div class="row">
       
       <div class="col-lg-8 main_column">
-
-      <div class="container top-icon-menu">
-        <div class="row">
-
-          <div class="col-sm-4 mx-auto d-block m3">
-            <img class="m3-icon" src="<?php bloginfo('template_directory'); ?>/assets/img/top/m3-icon01.png" alt="">
-            <p class="m3-text mx-auto d-block"><a href="/laravel-manual/">Laravel</a></p>
-          </div>
-
-          <div class="col-sm-4 mx-auto d-block m3">
-            <img class="m3-icon" src="<?php bloginfo('template_directory'); ?>/assets/img/top/m3-icon03.png" alt="">
-            <p class="m3-text mx-auto d-block">foo</p>
-          </div>
-          
-          <div class="col-sm-4 mx-auto d-block m3">
-            <img class="m3-icon" src="<?php bloginfo('template_directory'); ?>/assets/img/top/m3-icon02.png" alt="">
-            <p class="m3-text mx-auto d-block">foo</p>
-          </div>
-         
-        </div>
-      </div>
-      <!-- <h1 class="page-title"><?php bloginfo( 'name' ); ?> Blog</h1> -->
+      <h1 class="page-title">Category: <?php echo $category[0]->name; ?></h1>
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="item-summary mt-20 mb-40" id="wp_<?php the_ID(); ?>">
@@ -64,8 +54,7 @@
           </p>
           <div class="meta">
             <div class="tags">
-              <?php //the_tags('',''); ?>
-              <?php the_tags(); ?>
+              <?php the_tags('',''); ?>
             </div>
             <div class="categories">
               <?php the_category("<span></span>"); ?>

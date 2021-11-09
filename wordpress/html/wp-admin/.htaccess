@@ -1,6 +1,10 @@
 # AccessControl IP/HOST
 order deny,allow
 deny from all
+# localgost
+allow from 127.0.0.1
+allow from 172.30.0.4
+allow from 172.30.0.1
 # lig
 allow from 150.249.203.12
 allow from 118.240.132.91
