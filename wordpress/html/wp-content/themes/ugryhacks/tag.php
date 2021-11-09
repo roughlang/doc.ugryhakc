@@ -34,7 +34,7 @@ $tags = get_the_tags();
           $myposts = get_posts( $args );
           foreach ($myposts as $key => $item) {
             echo '<!--'.$item->ID.'-->';
-            echo '<li><a href="'.get_the_permalink().'">'.urldecode($item->post_name).'</a><span>'.$item->post_date.'</span></li>';
+            echo '<li><a href="'.get_the_permalink().'">'.urldecode($item->post_name).'</a><span class="tag-date">'.$item->post_date.'</span></li>';
             // echo $item->ID."<br>\n";
             // echo $item->post_date."<br>\n";
             // echo urldecode($item->post_name)."<br>\n";

@@ -64,8 +64,7 @@
           </p>
           <div class="meta">
             <div class="tags">
-              <?php //the_tags('',''); ?>
-              <?php the_tags(); ?>
+              <?php the_tags('',''); ?>
             </div>
             <div class="categories">
               <?php the_category("<span></span>"); ?>

@@ -426,6 +426,15 @@ body {
         .post-date {
           font-size: 12px;
         }
+        ul{
+          li {
+            .tag-date {
+              font-size: 12px;
+              margin-left: 20px;
+              color: #666;
+            }
+          }
+        }
       }
       nav.pagination {
         // background: #ff0;
