@@ -26,7 +26,7 @@ function default_content($content) {
 ### title
 
 ------------------------
-- [https://localhost/](https://localhost/)
+- [site_name](site_url)
 
 
 <!-- Button trigger modal -->

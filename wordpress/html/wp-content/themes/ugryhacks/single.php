@@ -4,7 +4,7 @@
   /* categories */
   $category = get_the_category();
 ?>
-<body>
+
 <div class="top-line"></div>
 <?php include( get_template_directory()."/inc/nav.php"); ?>
 

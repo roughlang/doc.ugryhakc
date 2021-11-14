@@ -1,7 +1,6 @@
 <?php
   include( get_template_directory()."/inc/header.php");
 ?>
-<body>
 <div class="top-line"></div>
 <?php include( get_template_directory()."/inc/nav.php"); ?>
 
