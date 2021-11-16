@@ -230,6 +230,11 @@ body {
           line-height: 38px;
           font-weight: 300;
         }
+        h3 {
+          @include base-title-link;
+          font-weight: 300;
+          font-size: 20px;
+        }
         /* long text */
         p {
           font-size: 13px;
