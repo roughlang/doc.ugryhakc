@@ -14,7 +14,7 @@
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="item-summary mt-20 mb-40" id="wp_<?php the_ID(); ?>">
-          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          <h2 class="front-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           <p class="mt-20">
             <?php
               $icatch_image_path = get_the_post_thumbnail_url(get_the_ID(),'medium');

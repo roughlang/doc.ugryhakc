@@ -231,6 +231,13 @@ body {
           font-weight: 300;
           margin-bottom: 60px;
         }
+        h2.front-title {
+          @include base-title-link;
+          font-size: 21px;
+          line-height: 38px;
+          font-weight: 300;
+          margin-bottom: 0;
+        }
         h3 {
           @include base-title-link;
           font-weight: 300;

@@ -37,20 +37,50 @@
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <div class="item-summary mt-20 mb-40" id="wp_<?php the_ID(); ?>">
-          <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+          <h2 class="front-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           <p class="mt-20">
+
             <?php
-              $icatch_image_path = get_the_post_thumbnail_url(get_the_ID(),'medium');
-              if(!empty($icatch_image_path)) {
-                echo '<a href="'.get_the_permalink(get_the_ID()).'">';
-                echo '<img src="'.$icatch_image_path.'" alt="'.mt_rand(11111,99999).'" class="item-summary-icatch">';
-                echo '</a>';
+              $assets = get_template_directory_uri()."/assets/img/categories/";
+              $target_categories = [
+                "ai-machine-learning",
+                "backend",
+                "column",
+                "docker",
+                "editor",
+                "git",
+                "laravel",
+                "linux",
+                "python",
+                "react",
+                "seo",
+                "twitter",
+                "uncategorized",
+                "wordpress",
+                "test",
+              ];
+              $category = get_the_category();
+              $cat_slug = $category[0]->category_nicename;
+              var_dump($cat_slug);
+              var_dump(array_keys($target_categories, $cat_slug));
+              if (in_array($cat_slug,$target_categories,false)) {
+                echo $assets.$cat_slug.'.png';
+                echo '<a href="#"><img src="'.$assets.$cat_slug.'.png" class="item-summary-icatch"></a>';
+              } else {
+                $cat_slug = "else";
+                echo '<a href="#"><img src="'.$assets.$cat_slug.'.png" class="item-summary-icatch"></a>';
               }
-              else {
-                // if(first_image()) {
-                //   echo '<img src="'.first_image().'" alt="'.mt_rand(11111,99999).'" class="item-summary-icatch">';
-                // }
-              }
+              // $icatch_image_path = get_the_post_thumbnail_url(get_the_ID(),'medium');
+              // if(!empty($icatch_image_path)) {
+              //   echo '<a href="'.get_the_permalink(get_the_ID()).'">';
+              //   echo '<img src="'.$icatch_image_path.'" alt="'.mt_rand(11111,99999).'" class="item-summary-icatch">';
+              //   echo '</a>';
+              // }
+              // else {
+              //   // if(first_image()) {
+              //   //   echo '<img src="'.first_image().'" alt="'.mt_rand(11111,99999).'" class="item-summary-icatch">';
+              //   // }
+              // }
             ?>
             <!-- <a href="#"><img src="/wp-content/themes/ugryhacks/assets/img/sample/IMG_3436.JPG" class="item-summary-icatch"></a> -->
             <?php
