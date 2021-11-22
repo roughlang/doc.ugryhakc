@@ -25,7 +25,16 @@ function default_content($content) {
     $default = <<<EOM
 ### title
 
-------------------------
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
 - [site_name](site_url)
 
 
