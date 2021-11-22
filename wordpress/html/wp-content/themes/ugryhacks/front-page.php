@@ -39,7 +39,6 @@
         <div class="item-summary mt-20 mb-40" id="wp_<?php the_ID(); ?>">
           <h2 class="front-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           <p class="mt-20">
-
             <?php
               $assets = get_template_directory_uri()."/assets/img/categories/";
               $target_categories = [
@@ -62,11 +61,10 @@
               $category = get_the_category();
               $cat_slug = $category[0]->category_nicename;
               if (in_array($cat_slug,$target_categories,false)) {
-                echo $assets.$cat_slug.'.png';
-                echo '<a href="#"><img src="'.$assets.$cat_slug.'.png" class="item-summary-icatch"></a>';
+                echo '<a href="'.get_the_permalink().'"><img src="'.$assets.$cat_slug.'.png" class="item-summary-icatch"></a>';
               } else {
                 $cat_slug = "else";
-                echo '<a href="#"><img src="'.$assets.$cat_slug.'.png" class="item-summary-icatch"></a>';
+                echo '<a href="'.get_the_permalink().'"><img src="'.$assets.$cat_slug.'.png" class="item-summary-icatch"></a>';
               }
               // $icatch_image_path = get_the_post_thumbnail_url(get_the_ID(),'medium');
               // if(!empty($icatch_image_path)) {
