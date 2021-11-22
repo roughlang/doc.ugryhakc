@@ -61,8 +61,6 @@
               ];
               $category = get_the_category();
               $cat_slug = $category[0]->category_nicename;
-              var_dump($cat_slug);
-              var_dump(array_keys($target_categories, $cat_slug));
               if (in_array($cat_slug,$target_categories,false)) {
                 echo $assets.$cat_slug.'.png';
                 echo '<a href="#"><img src="'.$assets.$cat_slug.'.png" class="item-summary-icatch"></a>';
